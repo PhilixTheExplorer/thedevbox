@@ -2,11 +2,10 @@
 
 import dynamic from "next/dynamic";
 import type { ComponentType } from "react";
+import { BrandLoader } from "@/components/brand-loader";
 import type { AvailableToolId } from "./index";
 
-const ToolLoading = () => (
-  <div className="text-xs text-muted px-1 py-2">loading tool...</div>
-);
+const ToolLoading = () => <BrandLoader />;
 
 const Base64Tool = dynamic(() => import("./base64/ui"), {
   loading: ToolLoading,

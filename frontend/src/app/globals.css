@@ -64,6 +64,8 @@
   /* Motion */
   --animate-blink: blink 1s step-end infinite;
   --animate-fade-in: fadeIn 0.18s ease both;
+  --animate-brand-cube: brandCube 1.6s ease-in-out infinite;
+  --animate-brand-ring: brandRing 1.6s linear infinite;
 }
 
 :root {
@@ -114,6 +116,107 @@
     opacity: 1;
     transform: none;
   }
+}
+
+@keyframes brandRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes brandCube {
+  0% {
+    transform: rotateX(-24deg) rotateY(35deg) rotateZ(0deg);
+  }
+  25% {
+    transform: rotateX(-24deg) rotateY(125deg) rotateZ(4deg);
+  }
+  50% {
+    transform: rotateX(-24deg) rotateY(215deg) rotateZ(0deg);
+  }
+  75% {
+    transform: rotateX(-24deg) rotateY(305deg) rotateZ(-4deg);
+  }
+  100% {
+    transform: rotateX(-24deg) rotateY(395deg) rotateZ(0deg);
+  }
+}
+
+.brand-loader-mark {
+  position: relative;
+  width: 4.75rem;
+  height: 4.75rem;
+  display: grid;
+  place-items: center;
+  perspective: 10rem;
+}
+
+.brand-loader-ring {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  border: 1px solid var(--border2);
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    conic-gradient(
+      from 0deg,
+      transparent 0 28%,
+      var(--accent) 28% 40%,
+      transparent 40% 100%
+    )
+    border-box;
+  animation: var(--animate-brand-ring);
+}
+
+.brand-loader-cube {
+  position: relative;
+  width: 2.35rem;
+  height: 2.35rem;
+  animation: var(--animate-brand-cube);
+  transform-style: preserve-3d;
+}
+
+.brand-loader-face {
+  position: absolute;
+  inset: 0;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid rgb(from var(--accent) r g b / 60%);
+  backface-visibility: visible;
+  box-shadow: inset 0 0 0.9rem rgb(0 0 0 / 16%);
+}
+
+.brand-loader-face-top {
+  background: rgb(from var(--accent) r g b / 32%);
+  transform: rotateX(90deg) translateZ(1.175rem);
+}
+
+.brand-loader-face-bottom {
+  background: rgb(from var(--accent) r g b / 9%);
+  transform: rotateX(-90deg) translateZ(1.175rem);
+}
+
+.brand-loader-face-front {
+  background: rgb(from var(--accent) r g b / 26%);
+  transform: translateZ(1.175rem);
+}
+
+.brand-loader-face-back {
+  background: rgb(from var(--accent) r g b / 12%);
+  transform: rotateY(180deg) translateZ(1.175rem);
+}
+
+.brand-loader-face-right {
+  background: rgb(from var(--accent) r g b / 20%);
+  transform: rotateY(90deg) translateZ(1.175rem);
+}
+
+.brand-loader-face-left {
+  background: rgb(from var(--accent) r g b / 16%);
+  transform: rotateY(-90deg) translateZ(1.175rem);
 }
 
 :root[data-theme="dark"] {
