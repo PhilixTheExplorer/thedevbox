@@ -99,9 +99,9 @@ export default function DiffViewerTool() {
             <CopyBtn text={diff.patch} disabled={!diff.patch} />
           </div>
           <div className="h-tool-editor overflow-auto rounded-sm border border-border bg-bg text-xs">
-            {diff.parts.map((part, index) => (
+            {diff.parts.map((part) => (
               <div
-                key={`${part.type}-${index}`}
+                key={part.id}
                 className={`px-3 py-1 font-mono ${
                   part.type === "add"
                     ? "bg-green/10 text-green"

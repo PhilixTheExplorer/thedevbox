@@ -2,6 +2,7 @@ export type DiffMode = "lines" | "words";
 export type DiffPartType = "same" | "add" | "remove";
 
 export type DiffPart = {
+  id: string;
   type: DiffPartType;
   value: string;
 };
@@ -68,30 +69,35 @@ export function compareText(
   }
 
   const parts: DiffPart[] = [];
+  const nextPart = (type: DiffPartType, value: string) => ({
+    id: `${parts.length}:${type}:${value}`,
+    type,
+    value,
+  });
   let i = 0;
   let j = 0;
 
   while (i < left.length && j < right.length) {
     if (normalize(left[i]) === normalize(right[j])) {
-      parts.push({ type: "same", value: right[j] });
+      parts.push(nextPart("same", right[j]));
       i += 1;
       j += 1;
     } else if (table[i + 1][j] >= table[i][j + 1]) {
-      parts.push({ type: "remove", value: left[i] });
+      parts.push(nextPart("remove", left[i]));
       i += 1;
     } else {
-      parts.push({ type: "add", value: right[j] });
+      parts.push(nextPart("add", right[j]));
       j += 1;
     }
   }
 
   while (i < left.length) {
-    parts.push({ type: "remove", value: left[i] });
+    parts.push(nextPart("remove", left[i]));
     i += 1;
   }
 
   while (j < right.length) {
-    parts.push({ type: "add", value: right[j] });
+    parts.push(nextPart("add", right[j]));
     j += 1;
   }
 

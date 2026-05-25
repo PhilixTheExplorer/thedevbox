@@ -6,9 +6,16 @@ export type RegexResult = {
 };
 
 export type RegexMatch = {
+  id: string;
   value: string;
   index: number;
-  groups: string[];
+  groups: RegexGroup[];
+};
+
+export type RegexGroup = {
+  id: string;
+  label: number;
+  value: string;
 };
 
 function normalizeFlags(flags: string) {
@@ -31,11 +38,21 @@ export function testRegex(
       ? matcher
       : new RegExp(matcher.source, `${matcher.flags}g`);
     const matches = [...sample.matchAll(globalMatcher)];
-    const parsedMatches = matches.map((match) => ({
-      value: match[0],
-      index: match.index ?? 0,
-      groups: match.slice(1).map((group) => group ?? ""),
-    }));
+    const parsedMatches = matches.map((match) => {
+      const index = match.index ?? 0;
+      const value = match[0];
+
+      return {
+        id: `${index}:${value}`,
+        value,
+        index,
+        groups: match.slice(1).map((group, groupIndex) => ({
+          id: `${index}:${value}:${groupIndex + 1}:${group ?? ""}`,
+          label: groupIndex + 1,
+          value: group ?? "",
+        })),
+      };
+    });
 
     if (matches.length === 0) {
       return { output: "no matches", error: null, count: 0, matches: [] };

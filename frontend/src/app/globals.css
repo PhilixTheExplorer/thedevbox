@@ -151,8 +151,8 @@
 @layer base {
   body {
     font-family:
-      var(--font-jetbrains-mono), "JetBrains Mono", "Fira Code", "Cascadia Code",
-      monospace;
+      var(--font-jetbrains-mono), "JetBrains Mono", "Fira Code",
+      "Cascadia Code", monospace;
   }
 }
 

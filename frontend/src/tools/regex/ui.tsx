@@ -88,7 +88,7 @@ export default function RegexTool() {
               <div className="flex flex-col gap-2">
                 {result.matches.map((match, index) => (
                   <div
-                    key={`${match.index}-${index}`}
+                    key={match.id}
                     className="rounded-sm border border-border bg-surface px-3 py-2"
                   >
                     <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
@@ -102,15 +102,17 @@ export default function RegexTool() {
                     </code>
                     {match.groups.length > 0 && (
                       <div className="mt-2 grid gap-1 sm:grid-cols-2">
-                        {match.groups.map((group, groupIndex) => (
+                        {match.groups.map((group) => (
                           <div
-                            key={`${groupIndex}-${group}`}
+                            key={group.id}
                             className="min-w-0 rounded-sm border border-border bg-bg px-2 py-1"
                           >
                             <span className="mr-2 text-2xs text-muted">
-                              group {groupIndex + 1}
+                              group {group.label}
                             </span>
-                            <code className="break-all text-xs">{group}</code>
+                            <code className="break-all text-xs">
+                              {group.value}
+                            </code>
                           </div>
                         ))}
                       </div>
