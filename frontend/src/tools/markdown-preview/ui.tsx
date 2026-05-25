@@ -8,9 +8,9 @@ import { CopyBtn } from "@/components/ui/copy-button";
 import { ToolTextarea } from "@/components/ui/textarea";
 import { getMarkdownPreviewStats } from "./logic";
 
-const sampleInput = `# Devbox Markdown Rulebook
+const sampleInput = `# thedevbox Markdown Rulebook
 
-This example shows common Markdown and GFM rules used in devbox docs.
+This example shows common Markdown and GFM rules used in thedevbox docs.
 
 ## Heading Levels
 ### H3 Heading
@@ -26,11 +26,11 @@ This example shows common Markdown and GFM rules used in devbox docs.
 - Inline code: \`pnpm test:tool regex\`
 
 ## Links
-- [Devbox Website](https://thedevbox.org)
-- <https://github.com/PhilixTheExplorer/devbox>
+- [thedevbox Website](https://thedevbox.org)
+- <https://github.com/PhilixTheExplorer/thedevbox>
 
 ## Blockquote
-> Devbox tools run client-side.
+> thedevbox tools run client-side.
 > No telemetry by default.
 
 ## Lists
@@ -38,7 +38,7 @@ This example shows common Markdown and GFM rules used in devbox docs.
 - Regex Tester
 - Timestamp Converter
 
-1. Open devbox
+1. Open thedevbox
 2. Pick a tool
 3. Copy the output
 
@@ -61,7 +61,7 @@ pnpm test:tool regex
 \`\`\`
 
 \`\`\`ts
-type DevboxTool = {
+type ThedevboxTool = {
   id: string;
   cat: "text" | "convert";
   soon: boolean;
@@ -70,7 +70,7 @@ type DevboxTool = {
 
 \`\`\`json
 {
-  "name": "devbox",
+  "name": "thedevbox",
   "openSource": true,
   "license": "MIT"
 }
@@ -81,7 +81,7 @@ type DevboxTool = {
 ---
 
 ## Image
-![Devbox Favicon]("/favicon.ico")`;
+![thedevbox Favicon]("/favicon.ico")`;
 
 export default function MarkdownPreviewTool() {
   const [input, setInput] = useState(sampleInput);

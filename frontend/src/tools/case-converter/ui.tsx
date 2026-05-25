@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Btn, CopyBtn, SectionLabel, ToolTextarea } from "@/components/ui";
 import { convertAllCases } from "./logic";
 
-const sampleInput = "hello world from devbox";
+const sampleInput = "hello world from thedevbox";
 
 export default function CaseConverterTool() {
   const [input, setInput] = useState(sampleInput);
@@ -43,7 +43,7 @@ export default function CaseConverterTool() {
             <ToolTextarea
               value={input}
               onChange={(event) => setInput(event.target.value)}
-              placeholder="devbox topbar sponsor button"
+              placeholder="thedevbox topbar sponsor button"
               rows={3}
               className="min-h-24 resize-none text-xs"
             />

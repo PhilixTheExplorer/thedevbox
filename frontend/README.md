@@ -1,6 +1,6 @@
-# [devbox] Frontend
+# [thedevbox] Frontend
 
-The frontend setup for [devbox]
+The frontend setup for [thedevbox]
 
 ## Stack
 

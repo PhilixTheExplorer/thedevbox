@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Btn, CopyBtn, SectionLabel, ToolTextarea } from "@/components/ui";
 import { digestAllText } from "./logic";
 
-const sampleInput = "devbox";
+const sampleInput = "thedevbox";
 
 type HashRows = Awaited<ReturnType<typeof digestAllText>>;
 

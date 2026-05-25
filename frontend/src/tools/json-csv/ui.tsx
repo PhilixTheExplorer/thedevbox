@@ -37,7 +37,9 @@ export default function JsonCsvTool() {
       input={input}
       output={result.output}
       error={result.error}
-      placeholder={mode === "json-to-csv" ? '[{"id":1}]' : "id,name\n1,devbox"}
+      placeholder={
+        mode === "json-to-csv" ? '[{"id":1}]' : "id,name\n1,thedevbox"
+      }
       onInputChange={setInput}
       controls={
         <>

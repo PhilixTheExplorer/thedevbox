@@ -7,7 +7,7 @@ import { jsonToTypescript } from "./logic";
 
 const sampleInput = `{
   "id": 1,
-  "name": "devbox",
+  "name": "thedevbox",
   "private": true,
   "tools": [
     { "id": "json", "category": "format" },
@@ -17,7 +17,7 @@ const sampleInput = `{
 
 export default function JsonTypescriptTool() {
   const [input, setInput] = useState(sampleInput);
-  const [rootName, setRootName] = useState("DevboxConfig");
+  const [rootName, setRootName] = useState("ThedevboxConfig");
   const result = useMemo(
     () => jsonToTypescript(input, rootName),
     [input, rootName],

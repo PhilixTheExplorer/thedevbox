@@ -7,7 +7,7 @@ import { Btn } from "@/components/ui/button";
 import { convertJsonYaml, type JsonYamlMode } from "./logic";
 
 const jsonSample = `{
-  "name": "devbox",
+  "name": "thedevbox",
   "private": true,
   "tools": ["json", "yaml", "markdown"],
   "server": {
@@ -16,7 +16,7 @@ const jsonSample = `{
   }
 }`;
 
-const yamlSample = `name: devbox
+const yamlSample = `name: thedevbox
 private: true
 tools: [json, yaml, markdown]
 server:

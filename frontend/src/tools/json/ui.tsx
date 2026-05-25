@@ -10,7 +10,7 @@ import { Btn } from "@/components/ui/button";
 import { formatJson, type JsonMode } from "./logic";
 
 const sampleJson = `{
-  "name": "devbox",
+  "name": "thedevbox",
   "private": true,
   "tools": ["json", "uuid"],
   "settings": {

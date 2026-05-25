@@ -5,9 +5,9 @@ import { ToolSegmentedControl } from "@/components/tool-kit/tool-controls";
 import { Btn, CopyBtn, ToolTextarea } from "@/components/ui";
 import { type Base64Mode, transformBase64 } from "./logic";
 
-const encodeSample = "devbox keeps clipboard-shaped secrets local";
+const encodeSample = "thedevbox keeps clipboard-shaped secrets local";
 const decodeSample =
-  "ZGV2Ym94IGtlZXBzIGNsaXBib2FyZC1zaGFwZWQgc2VjcmV0cyBsb2NhbA==";
+  "dGhlZGV2Ym94IGtlZXBzIGNsaXBib2FyZC1zaGFwZWQgc2VjcmV0cyBsb2NhbA==";
 
 export default function Base64Tool() {
   const [mode, setMode] = useState<Base64Mode>("encode");

@@ -24,7 +24,7 @@ export default function HomePage() {
           {"// welcome"}
         </div>
         <h1 className="text-4xl font-bold leading-none m-0">
-          <span className="text-accent">[</span>devbox
+          <span className="text-accent">[</span>thedevbox
           <span className="text-accent">]</span>
         </h1>
         <p className="text-muted2 mt-3 text-ui leading-relaxed max-w-copy mb-0">

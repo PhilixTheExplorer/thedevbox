@@ -1,6 +1,6 @@
 {
-  "name": "devbox",
-  "short_name": "devbox",
+  "name": "thedevbox",
+  "short_name": "thedevbox",
   "description": "Fast, private, ad-free developer tools that run in your browser.",
   "start_url": "/",
   "icons": [

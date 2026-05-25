@@ -33,16 +33,16 @@ export default function AboutPage() {
           {"// about"}
         </div>
         <h1 className="text-2xl font-bold mb-7 mt-0">
-          what is <span className="text-accent">[</span>devbox
+          what is <span className="text-accent">[</span>thedevbox
           <span className="text-accent">]</span>?
         </h1>
         <hr className="border-border mb-7" />
         <section className="flex flex-col gap-4 leading-loose text-muted2">
           <p>
             thedevbox is the official home of{" "}
-            <span className="text-text">[devbox]</span>, a collection of tools
-            built by developers who got tired of sites that require login to
-            format json, questionable online converters, and heavyweight apps
+            <span className="text-text">[thedevbox]</span>, a collection of
+            tools built by developers who got tired of sites that require login
+            to format json, questionable online converters, and heavyweight apps
             for tiny everyday tasks.
           </p>
           <p>

@@ -2,8 +2,9 @@ const SITE_URL_FALLBACK = "https://www.thedevbox.org";
 
 export const SITE_URL = SITE_URL_FALLBACK;
 export const SITE_NAME = "thedevbox";
-export const SITE_DISPLAY_NAME = "devbox";
-export const SITE_LOGO_TEXT = "[devbox]";
+export const SITE_DISPLAY_NAME = "thedevbox";
+export const SITE_LOGO_TEXT = "[thedevbox]";
+export const SITE_ALTERNATE_NAMES = ["devbox", "[devbox]"] as const;
 export const SITE_TITLE = "thedevbox - tools that don't suck";
 export const SITE_DESCRIPTION =
   "Fast, private, ad-free developer tools that run in your browser.";
@@ -44,7 +45,7 @@ export function getSiteStructuredData() {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: SITE_NAME,
-      alternateName: [SITE_DISPLAY_NAME, SITE_LOGO_TEXT],
+      alternateName: [...SITE_ALTERNATE_NAMES],
       url: siteOrigin,
       description: SITE_DESCRIPTION,
       inLanguage: "en-US",
@@ -53,7 +54,7 @@ export function getSiteStructuredData() {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       name: SITE_NAME,
-      alternateName: [SITE_DISPLAY_NAME, SITE_LOGO_TEXT],
+      alternateName: [...SITE_ALTERNATE_NAMES],
       url: siteOrigin,
       description: SITE_DESCRIPTION,
       applicationCategory: "DeveloperApplication",
@@ -79,7 +80,7 @@ export function getSiteStructuredData() {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: SITE_NAME,
-      alternateName: [SITE_DISPLAY_NAME, SITE_LOGO_TEXT],
+      alternateName: [...SITE_ALTERNATE_NAMES],
       url: siteOrigin,
       sameAs: [OSS_LINKS.repo],
     },
@@ -87,9 +88,9 @@ export function getSiteStructuredData() {
 }
 
 export const OSS_LINKS = {
-  repo: "https://github.com/PhilixTheExplorer/devbox",
-  contribute: "https://github.com/PhilixTheExplorer/devbox/pulls",
-  issues: "https://github.com/PhilixTheExplorer/devbox/issues",
+  repo: "https://github.com/PhilixTheExplorer/thedevbox",
+  contribute: "https://github.com/PhilixTheExplorer/thedevbox/pulls",
+  issues: "https://github.com/PhilixTheExplorer/thedevbox/issues",
   sponsors: "https://github.com/sponsors/PhilixTheExplorer",
 } as const;
 

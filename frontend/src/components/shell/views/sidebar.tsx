@@ -21,7 +21,7 @@ export function DevboxSidebar() {
           onClick={actions.finishNavigation}
           className="bg-transparent border-none cursor-pointer p-0 font-inherit text-sm font-bold text-text no-underline"
         >
-          <span className="text-accent">[</span>devbox
+          <span className="text-accent">[</span>thedevbox
           <span className="text-accent">]</span>
         </Link>
 

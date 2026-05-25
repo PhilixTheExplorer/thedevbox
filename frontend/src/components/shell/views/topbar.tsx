@@ -42,7 +42,7 @@ export function DevboxTopbar() {
         href="/"
         className="text-ui-xs text-muted whitespace-nowrap overflow-hidden text-ellipsis flex-1 lg:flex-initial"
       >
-        <span className="text-accent">[</span>devbox
+        <span className="text-accent">[</span>thedevbox
         <span className="text-accent">]</span>
       </Link>
 

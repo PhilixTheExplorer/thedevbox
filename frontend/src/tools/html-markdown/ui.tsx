@@ -6,14 +6,14 @@ import { ToolSegmentedControl } from "@/components/tool-kit/tool-controls";
 import { Btn } from "@/components/ui/button";
 import { convertHtmlMarkdown, type HtmlMarkdownMode } from "./logic";
 
-const htmlSample = `<h1>Devbox</h1>
+const htmlSample = `<h1>thedevbox</h1>
 <p><strong>HTML</strong> converts to Markdown with GFM tables.</p>
 <table>
   <tr><th>Tool</th><th>Status</th></tr>
   <tr><td>HTML ↔ Markdown</td><td>ready</td></tr>
 </table>`;
 
-const markdownSample = `# Devbox
+const markdownSample = `# thedevbox
 
 **Markdown** converts to HTML with GFM.
 

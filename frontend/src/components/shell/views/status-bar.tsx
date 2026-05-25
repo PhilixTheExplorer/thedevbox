@@ -11,7 +11,7 @@ const AVAILABLE_TOOL_COUNT = TOOLS.filter(
 export function DevboxStatusBar() {
   return (
     <footer className="flex items-center shrink-0 min-w-0 h-status-bar lg:h-status-bar-compact px-3.5 gap-2 lg:gap-4 border-t border-border bg-surface text-2xs text-muted">
-      <span className="font-medium text-accent">devbox v0.1</span>
+      <span className="font-medium text-accent">thedevbox v0.1</span>
       <span className="hidden lg:inline">•</span>
       <span className="hidden lg:inline">⌘K search</span>
       <span>•</span>

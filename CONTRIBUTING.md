@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for taking the time to improve devbox. This project is meant to stay fast, private, and useful for everyday developer work.
+Thanks for taking the time to improve thedevbox. This project is meant to stay fast, private, and useful for everyday developer work.
 
 ## Project Setup
 
@@ -33,7 +33,7 @@ pnpm create:tool base64 --category convert --name "Base64 Encode / Decode" --des
 
 The scaffold creates the tool component, shared logic file, unit test, registry entry, and component mapping. After scaffolding, update the generated files to match the tool behavior and UI.
 
-Good tools for devbox are:
+Good tools for thedevbox are:
 
 - useful in real developer workflows
 - fast enough to feel instant

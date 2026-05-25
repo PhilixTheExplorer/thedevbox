@@ -1,4 +1,4 @@
-# [devbox]
+# [thedevbox]
 
 [![Website](https://img.shields.io/badge/site-thedevbox.org-52a878?style=flat-square)](https://thedevbox.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](./LICENSE)
@@ -11,7 +11,7 @@
 
 Tools that do not suck. No ads. No accounts. No tracking.
 
-[devbox] is a collection of developer tools built by and for developers who got tired of sites that require a login to format JSON, sketchy online converters that probably log your data, and heavy desktop apps just to decode a token.
+[thedevbox] is a collection of developer tools built by and for developers who got tired of sites that require a login to format JSON, sketchy online converters that probably log your data, and heavy desktop apps just to decode a token.
 
 Every tool runs **entirely in your browser** unless a tool clearly says otherwise. Your data stays on your machine, and we do not track what you paste.
 
